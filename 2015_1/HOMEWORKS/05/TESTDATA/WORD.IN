@@ -1,0 +1,90 @@
+8
+
+dip
+lip
+mad
+map
+maple
+may
+pad
+pip
+pod
+pop
+sap
+sip
+slice
+slick
+spice
+stick
+stock
+*
+spice stock
+may pod
+
+dip
+lip
+*
+dip lip
+
+aa
+bb
+ac
+*
+aa ac
+
+aa
+ab
+bb
+*
+aa bb
+
+aaa
+bbb
+aab
+aba
+abb
+a
+b
+*
+aab bbb
+
+abc
+abd
+aaa
+aab
+abb
+*
+abb aab
+abc abd
+
+dip
+lip
+mad
+map
+mapl
+maple
+may
+pad
+pip
+pod
+pop
+sap
+sip
+slice
+slick
+spice
+stick
+stock
+*
+spice slick
+may mad
+map map
+
+mapl
+maple
+mba
+mbal
+mbale
+mbple
+*
+maple mbale
