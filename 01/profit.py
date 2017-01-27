@@ -53,6 +53,8 @@ def BruteForceSingleSellProfit(arr):
 
     return bestProfit
 
+arr = [2, 7, 1, 8, 2, 8, 4, 5, 9, 0, 4, 5]
+print(BruteForceSingleSellProfit(arr))
 # This solution is extremely inelegant, and it seems like there just *has* to
 # be a better solution.  In fact, there are many better solutions, and we'll
 # see three of them.
@@ -109,8 +111,8 @@ def DivideAndConquerSingleSellProfit(arr):
         return 0;
 
     # Cut the array into two roughly equal pieces.
-    left  = arr[ : len(arr) / 2]
-    right = arr[len(arr) / 2 : ]
+    left  = arr[ : int(len(arr) / 2)]
+    right = arr[int(len(arr) / 2) : ]
 
     # Find the values for buying and selling purely in the left or purely in
     # the right.
@@ -122,7 +124,8 @@ def DivideAndConquerSingleSellProfit(arr):
 
     # Return the best of the three
     return max(leftBest, rightBest, crossBest)
-    
+
+print(DivideAndConquerSingleSellProfit(arr))
 # While the above algorithm for computing the maximum single-sell profit is
 # better timewise than what we started with (O(n log n) versus O(n^2)), we can
 # still improve the time performance.  In particular, recall our recurrence
@@ -198,7 +201,7 @@ def OptimizedDivideAndConquerSingleSellProfit(arr):
     def Recursion(arr, lhs, rhs):
         # If the array has just one element, we return that the profit is zero
         # but the minimum and maximum values are just that array value.
-        if lhs == rhs:
+        if lhs == rhs or lhs == rhs +1:
             return (0, arr[lhs], arr[rhs])
 
         # Recursively compute the values for the first and latter half of the
@@ -221,6 +224,8 @@ def OptimizedDivideAndConquerSingleSellProfit(arr):
     profit, _, _ = Recursion(arr, 0, len(arr) - 1)
     return profit
 
+
+#print(OptimizedDivideAndConquerSingleSellProfit(arr))
 # At this point we've traded our O(n^2)-time, O(1)-space solution for an O(n)-
 # time, O(log n) space solution.  But can we do better than this?
 #
@@ -298,6 +303,7 @@ def DynamicProgrammingSingleSellProfit(arr):
 
     return profit
 
+print(DynamicProgrammingSingleSellProfit(arr))
 # To summarize our algorithms, we have seen
 #
 # Naive:                        O(n ^ 2)   time, O(1)     space
